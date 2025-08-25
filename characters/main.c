@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 /**
  * @brief Calculate Length of Null-Terminated String
@@ -77,6 +78,7 @@ int main() {
   printf("the length of name is: %d\n", str_len(&name[0]));
 
   print_ascii();
+  printf("the length of name is: %lu\n", strlen(name));
 
   return 0;
 }
