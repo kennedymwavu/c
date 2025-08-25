@@ -11,6 +11,33 @@ int str_len(char *ptr_to_first_item) {
   return count;
 }
 
+// print letters + their int representation
+int print_ascii() {
+  // NOTE: strings are null-terminated, so length of
+  // an array of strings should be the real length + 1
+  char upper[27] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  char lower[27] = "abcdefghijklmnopqrstuvwxyz";
+
+  printf("\n----ASCII----\nascii for upper:\n");
+
+  for (int i = 0; i < str_len(&upper[0]); ++i) {
+    printf("%c: %d, i = %d\n", upper[i], upper[i], i);
+  }
+
+  printf("\nascii for lower:\n");
+
+  for (int i = 0; i < str_len(&lower[0]); ++i) {
+    printf("%c: %d, i = %d\n", lower[i], lower[i], i);
+  }
+
+  printf("\n----full ascii table----");
+  for (int i = 0; i < 128; ++i) {
+    printf("'%c': %d\n", i, i);
+  }
+
+  return 0;
+}
+
 int main() {
   char letter = 'A';
   printf("fav letter is '%c', and in ascii it is '%d'\n", letter, letter);
@@ -20,5 +47,8 @@ int main() {
 
   printf("first letter in name is: '%c'\n", name[0]);
   printf("the length of name is: %d\n", str_len(&name[0]));
+
+  print_ascii();
+
   return 0;
 }
