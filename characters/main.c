@@ -1,6 +1,27 @@
 #include <stdio.h>
 
-// find length of a character array
+/**
+ * @brief Calculate Length of Null-Terminated String
+ *
+ * Counts characters in a string till it finds the
+ * null terminator ('\0').
+ *
+ * @param ptr_to_first_item Pointer to first character
+ * of the string.
+ *
+ * @return Integer. Number of characters in the string,
+ * excluding the null terminator.
+ *
+ * @note This function assumes the input is a valid
+ * null-terminated string.
+ *
+ * @warning Passing non-null-terminated array will cause
+ * undefined behavior.
+ *
+ * @example
+ * char greeting[] = "hello";
+ * int greeting_len = str_len(&greeting[0]);
+ **/
 int str_len(char *ptr_to_first_item) {
   int count = 0;
 
@@ -11,7 +32,14 @@ int str_len(char *ptr_to_first_item) {
   return count;
 }
 
-// print letters + their int representation
+/**
+ * @brief Print ASCII
+ *
+ * @return Integer. 0 if success.
+ *
+ * @example
+ * print_ascii();
+ */
 int print_ascii() {
   // NOTE: strings are null-terminated, so length of
   // an array of strings should be the real length + 1
