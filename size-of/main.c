@@ -11,5 +11,6 @@ int main() {
   printf("sizeof(float)   = %zu\n", sizeof(float));
   printf("sizeof(double)   = %zu\n", sizeof(double));
   printf("sizeof(size_t)   = %zu\n", sizeof(size_t));
+  printf("sizeof(uint8)   = %zu\n", sizeof(unsigned int));
   return 0;
 }
